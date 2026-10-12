@@ -236,3 +236,5 @@ footer .wrap{grid-template-columns:1fr 1fr}
 .sticky-cta a{color:#fff;text-decoration:none;font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px}
 body{padding-bottom:60px}
 }
+.body-p a,.sign p a,.local-note a,.sub a,.factor a,.fine-note a,.faq-item p a{color:#0B7A6E;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.body-p a:hover,.sign p a:hover,.local-note a:hover,.sub a:hover,.factor a:hover,.fine-note a:hover,.faq-item p a:hover{color:var(--deep)}
