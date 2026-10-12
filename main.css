@@ -1,7 +1,6 @@
 :root{--deep:#0D1B2A;--deep2:#13293D;--cyan:#39D6C4;--cyan-d:#20B0A0;--sun:#FFC857;--ink:#12181F;--bg:#fff;--soft:#F0FBFA;--gray:#54606B;--line:#DCEBE9}
 *{margin:0;padding:0;box-sizing:border-box}
-html{overflow-x:hidden}
-body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
 h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 .wrap.narrow{max-width:800px}
@@ -46,7 +45,7 @@ nav{background:#fff;box-shadow:0 1px 0 var(--line);position:relative;z-index:20}
 .drawer-cta{color:var(--cyan-d)!important;font-weight:700!important}
 .mob-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9998;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
 .mob-overlay.visible{opacity:1;visibility:visible}
-.hero{background:linear-gradient(100deg,rgba(13,27,42,.92) 0%,rgba(13,27,42,.75) 45%,rgba(13,27,42,.45) 100%),url('/images/home-hero-emergency-plumber-upland-ca.webp') center/cover no-repeat;background-color:var(--deep);color:#fff;padding:72px 0;position:relative;overflow:hidden}
+.hero{background-color:var(--deep);color:#fff;padding:72px 0;position:relative;overflow:hidden}
 .pulse{position:absolute;border-radius:50%;border:1px solid rgba(57,214,196,.25)}
 .p1{width:320px;height:320px;top:20%;right:2%}
 .p2{width:480px;height:480px;top:8%;right:-6%}
@@ -141,7 +140,7 @@ footer .disclaimer{max-width:1180px;margin:30px auto 0;padding:18px 24px 0;borde
 .pricebox{min-width:0}
 .boxgrid{min-width:0}
 .factors{min-width:0}
-.sidecard{background:var(--deep);color:#fff;border-radius:18px;padding:26px;position:sticky;top:20px}
+.sidecard{background:var(--deep);color:#fff;border-radius:18px;padding:26px;position:sticky;top:24px;align-self:start}
 .sidecard h3{font-size:19px;margin-bottom:6px}
 .sidecard p{color:#9FB3C2;font-size:14px;margin-bottom:14px}
 .sidecard .btn{width:100%;justify-content:center}
@@ -151,7 +150,7 @@ footer .disclaimer{max-width:1180px;margin:30px auto 0;padding:18px 24px 0;borde
 .boxgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .sign{background:var(--soft);border-radius:14px;padding:20px}
 .sign h4{font-size:16.5px;margin-bottom:5px}
-.sign p{font-size:14px;color:var(--gray)}
+.sign p{font-size:15px;color:var(--gray)}
 .midcta{background:var(--cyan);border-radius:16px;color:var(--deep);padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px;margin:34px 0;flex-wrap:wrap}
 .midcta h3{font-size:21px}
 .midcta p{font-size:14px;opacity:.8}
@@ -178,7 +177,7 @@ footer .disclaimer{max-width:1180px;margin:30px auto 0;padding:18px 24px 0;borde
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary:after{content:"+";position:absolute;right:0;top:14px;font-size:20px;color:var(--cyan-d)}
 .faq-item[open] summary:after{content:"–"}
-.faq-item p{font-size:14px;color:var(--gray);padding-bottom:16px}
+.faq-item p{font-size:16px;line-height:1.65;color:var(--gray);padding-bottom:16px}
 .rel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .rel a{background:var(--soft);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink)}
 .rel a:hover{box-shadow:0 12px 28px rgba(18,24,31,.10)}
@@ -238,3 +237,25 @@ body{padding-bottom:60px}
 }
 .body-p a,.sign p a,.local-note a,.sub a,.factor a,.fine-note a,.faq-item p a{color:#0B7A6E;font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .body-p a:hover,.sign p a:hover,.local-note a:hover,.sub a:hover,.factor a:hover,.fine-note a:hover,.faq-item p a:hover{color:var(--deep)}
+
+/* v11: hero background images, spacing, sidecard */
+.has-hero{position:relative;isolation:isolate;overflow:hidden}
+.has-hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.has-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(13,27,42,.94) 0%,rgba(13,27,42,.86) 55%,rgba(13,27,42,.78) 100%)}
+.hero.has-hero:before{background:linear-gradient(100deg,rgba(13,27,42,.93) 0%,rgba(13,27,42,.8) 48%,rgba(13,27,42,.5) 100%)}
+.pagehead.has-hero{padding:64px 0}
+main p+p{margin-top:14px}
+main :is(h2,h3,h4)+p{margin-top:14px}
+.body-p{line-height:1.7}
+.local-note{line-height:1.7}
+.side-kick{color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.side-link{display:block;margin-top:14px;color:var(--cyan);font-weight:600;font-size:14.5px;text-decoration:underline;text-underline-offset:3px}
+.side-link:hover{color:#fff}
+.sidecard li{font-size:15px}
+@media(max-width:900px){.twocol{grid-template-columns:1fr}.sidecard{position:static}}
+.localnote{border-left:4px solid var(--cyan);background:#f2f7fa;padding:22px 24px;border-radius:0 12px 12px 0;margin:32px 0}
+.localnote h2{margin-top:0}
+.localnote p+p{margin-top:12px}
+.localnote .src{font-size:14.5px;line-height:1.6;color:#41536a}
+.localnote .src a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:480px){footer .wrap{grid-template-columns:minmax(0,1fr)}footer .wrap>*{min-width:0}}
