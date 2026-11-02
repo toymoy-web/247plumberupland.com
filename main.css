@@ -260,6 +260,6 @@ main :is(h2,h3,h4)+p{margin-top:14px}
 .localnote .src a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:480px){footer .wrap{grid-template-columns:minmax(0,1fr)}footer .wrap>*{min-width:0}}
 
-.social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.social a{display:inline-block;margin:0;padding:6px 14px;border:1px solid rgba(255,255,255,.35);border-radius:100px;font-size:14px;line-height:1.4;color:#fff;text-decoration:none}
-.social a:hover{background:var(--cyan);border-color:var(--cyan);color:var(--deep)}
+.social{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+footer .social a{display:inline-block;margin:0;padding:7px 14px;border:1px solid var(--deep);border-radius:100px;font-size:14px;font-weight:600;line-height:1.4;color:var(--deep);background:var(--soft);text-decoration:none}
+footer .social a:hover{background:var(--deep);color:#fff}
